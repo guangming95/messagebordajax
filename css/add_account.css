@@ -1,0 +1,52 @@
+/*登录部分*/
+
+.login {
+    margin: 80px auto;
+    height: 389px;
+    width: 800px;
+    background: rgba(255,255,255,.9) url("../images/add_background.png") no-repeat;
+    background-size: contain;
+    border-radius: 23px;
+    padding: 50px 50px;
+    box-sizing: border-box;
+}
+.login .center {
+    margin: 0 auto;
+    width: 700px;
+    display: flex;
+    justify-content: space-between;
+}
+.login .center label {
+    display: inline-block;
+    margin: 10px 10px;
+}
+.login .center label input {
+    width: 200px;
+    height: 26px;
+    border: 1px solid #ccc;
+}
+.login .center label input[name='testcode']{
+    width: 90px;
+}
+.login .center label input[type='radio']{
+    width: 15px;
+}
+.login .center i{
+    text-align: center;
+    display: inline-block;
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    background: skyblue;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 20px 60px;
+}
+
+
+
+
+
+
+
+

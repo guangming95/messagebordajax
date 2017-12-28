@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="num">
+
+<script src="js/jquery-1.12.4.js"></script>
+<script>
+    <!DOCTYPE html>
+    <html lang="en">
+        <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        </head>
+        <body>
+        <div id="dv">
+        <ul></ul>
+        </div>
+        <script>
+    var arr = [ 1, 2, 3, 4, 5 ];
+
+    /*
+    // 要求:
+    // 1, 遍历打印该数组中的每一项
+    for( var i = 0; i < arr.length; i++ ) {
+        //  console.log( arr[ i ] );
+
+        function func1 () {
+            console.log( arr[ i ] );
+        }
+
+        func1();
+    }
+
+    // 2, 遍历打印数组中的 奇数 项
+    for ( var i = 0; i < arr.length; i++ ) {
+        // if ( i % 2 == 1 ) {
+        //     console.log( arr[ i ] );
+        // }
+
+        function func2() {
+            if ( i % 2 == 1 ) {
+                console.log( arr[ i ] );
+            }
+        }
+        func2();
+    }
+
+    // 3, 遍历打印数组中 的 偶数
+    for ( var i = 0; i < arr.length; i++ ) {
+        // if ( arr[ i ] % 2 == 0 ) {
+        //     console.log( arr[ i ] );
+        // }
+        function func3() {
+            if ( arr[ i ] % 2 == 0 ) {
+                console.log( arr[ i ] );
+            }
+        }
+        func3();
+    }
+
+    // 4, 遍历数组, 利用数组生成 li 标签并加入到 页面的 ul 标签中
+    var ul = document.querySelector( "#dv ul" );
+    for ( var i = 0; i < arr.length; i++ ) {
+        // var li = document.createElement( "li" );
+        // li.innerHTML = arr[ i ];
+        // ul.appendChild( li );
+
+        function func4() {
+            var li = document.createElement( "li" );
+            li.innerHTML = arr[ i ];
+            ul.appendChild( li );
+        }
+
+        func4();
+    }
+
+    */
+
+
+
+    // 考虑封装
+    function myForEach( arr, func ) {
+        for ( var i= 0; i < arr.length; i++ ) {
+            func( arr[ i ], i );
+        }
+    }
+
+    // 1, 打印所有
+    myForEach( arr, function ( item, index ) {
+        console.log( item );
+    } );
+    // 2, jishuxiang
+    myForEach( arr, function ( item, index ) {
+        if ( index % 2 == 1 ) {
+            console.log( item );
+        }
+    });
+    // 3, 打印偶数
+    myForEach( arr, function ( item, index ) {
+        if ( item % 2 == 0 ) {
+            console.log( item );
+        }
+    });
+    // 执行 dom
+    var ul = document.querySelector( "#dv ul" );
+    myForEach( arr, function ( item, index ) {
+        var li = document.createElement( "li" );
+        li.innerHTML = item;
+        ul.appendChild( li );
+    });
+
+
+
+
+
+</script>
+</body>
+</html>
+
+</script>
+</body>
+</html>

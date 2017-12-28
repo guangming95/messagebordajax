@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>发表留言</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/add_comment.css">
+</head>
+<body>
+
+<div class="header">
+    <div class="top">
+        <div class="w">
+            <div class="left fl">我是可爱的留言板</div>
+            <div class="right fr">
+                <div class="user disable">欢迎您：小啊</div>
+                <a href="./login.html" class="visitor ">登录</a>
+                <a href="./add_account.html" class="visitor ">注册</a>
+            </div>
+        </div>
+    </div>
+    <div class="w">
+        <div class="login">
+            <div class="center">
+                <div class="left fl">
+                    <form id="ajaxForm">
+                        <label>标　题：<input type="text" name="title" id="title"><br></label>
+                        <label>分　类：<select name="category" id="category"></select><br></label>
+                        <label>内　容：<br><textarea name="content" id="content"></textarea><br></label>
+                        <i id="resetBtn">重新输入</i>
+                        <i id="submitBtn">发　　表</i>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="nav">
+    <div class="w"></div>
+</div>
+
+<div class="tips">
+    <p>用户名不能为空</p>
+</div>
+
+
+
+<!--侧面栏，登录才会有-->
+
+<div class="aside disable">
+    <ul>
+        <li id="add_comment">发帖</li>
+        <li id="exit">退出</li>
+    </ul>
+</div>
+<i class="scrolltop disable">返回顶部</i>
+
+
+
+<script type="text/html" id="myTplcategory">
+    <option value='{{category_id}}'>{{category_name}}</option>
+</script>
+
+
+
+<script src="../js/template-web.js"></script>
+<script src="../js/jquery-1.12.4.js"></script>
+<script src="../js/jQuery-cookie.js"></script>
+<script src="../js/base.js"></script>
+<script src="../js/comment.js"></script>
+</body>
+</html>
